@@ -17,13 +17,13 @@ const Home = () => {
     },
     {
       id: 3,
-      title: "mens",
+      title: "men's clothing",
       imageUrl:
         "https://images.unsplash.com/photo-1552168212-9ceb61083ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
     {
       id: 4,
-      title: "womens",
+      title: "women's clothing",
       imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
     },
   ];

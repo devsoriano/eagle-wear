@@ -10,14 +10,14 @@ export const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     const getCategories = async () => {
       const resCategories = await fetch(
-        "https://fakestoreapi.com/products/categories"
+        `${process.env.REACT_APP_FAKE_STORE_APP}/categories`
       );
       const dataCategories = await resCategories.json();
 
       const productsByCategories = {};
       for (let i = 0; i < dataCategories.length; i++) {
         const resProducts = await fetch(
-          `https://fakestoreapi.com/products/category/${dataCategories[i]}`
+          `${process.env.REACT_APP_FAKE_STORE_APP}/category/${dataCategories[i]}`
         );
         const dataProducts = await resProducts.json();
         productsByCategories[dataCategories[i]] = dataProducts;

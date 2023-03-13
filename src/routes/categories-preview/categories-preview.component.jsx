@@ -7,12 +7,16 @@ const CategoriesPreview = () => {
 
   return (
     <>
-      {Object.keys(categoriesMap).map((title) => {
-        const products = categoriesMap[title];
-        return (
-          <CategoryPreview key={title} title={title} products={products} />
-        );
-      })}
+      {Object.keys(categoriesMap).length === 0 ? (
+        <h3 className="loading">loading...</h3>
+      ) : (
+        Object.keys(categoriesMap).map((title) => {
+          const products = categoriesMap[title];
+          return (
+            <CategoryPreview key={title} title={title} products={products} />
+          );
+        })
+      )}
     </>
   );
 };
